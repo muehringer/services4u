@@ -38,3 +38,16 @@ D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Infr
 D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\AutoMapper.xml
 D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.dll
 D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Application.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Application.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\AutoMapper.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Domain.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Infrastructure.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Domain.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Domain.dll.config
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Base.Infrastructure.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\AutoMapper.xml
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.csprojResolveAssemblyReference.cache
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.csproj.CoreCompileInputs.cache
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.pdb
