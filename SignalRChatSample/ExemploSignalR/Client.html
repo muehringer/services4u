@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <style type="text/css">
+        .container {
+            background-color: #99CCFF;
+            border: thick solid #808080;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+
+    <script src="/Scripts/jquery-1.6.4.min.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="mensagem" />
+        <input type="button" id="enviamensagem" value="Enviar" />
+        <select id="usuarios"></select>
+        <span id="exibenome"></span>
+        <ul id="discussion"></ul>
+
+        <span></span>
+        <span id="connectionStatus"></span>
+    </div>
+
+    <script type="text/javascript">
+
+        function queryString(parameter) {
+            var loc = location.search.substring(1, location.search.length);
+            var param_value = false;
+            var params = loc.split("&");
+            for (i = 0; i < params.length; i++) {
+                param_name = params[i].substring(0, params[i].indexOf('='));
+                if (param_name == parameter) {
+                    param_value = params[i].substring(params[i].indexOf('=') + 1)
+                }
+            }
+            if (param_value) {
+                return param_value;
+            }
+            else {
+                return false;
+            }
+        }
+
+       
+        $(function () {
+
+            var nomeUsuario = queryString("nomeUsuario");
+
+            var chat = $.connection.serverHub;
+
+            chat.client.broadcastMessage = function (nome, mensagem) {
+                var today = new Date();
+                var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                var CurrentDateTime = date + ' ' + time;
+
+                var encodednome = $('<span />').text(CurrentDateTime + ' - ' + nome).html();
+                var encodedMsg = $('<div />').text(mensagem).html();
+
+                $('#discussion').append('<li><strong>' + encodednome
+                    + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
+
+            };
+
+
+            chat.client.broadcastLoad = function (nomes, existeUser) {
+
+                if (existeUser == false) {
+                    $('#usuarios').html('');
+                    $('#usuarios').append('<option value="todos" selected>Todos</option>');
+
+                    for (i = 0; i < nomes.length ; i++) {
+                        $('#usuarios').append('<option value="' + nomes[i].Id + '">' + nomes[i].Nome + '</option>');
+                    }
+                }
+                else {
+                    alert('Usuario já existe.');
+                    window.location = 'Entrar.html';
+                }
+            };
+
+
+            setInterval(function () {
+
+                nomeUsuario = queryString("nomeUsuario");
+
+                $('#exibenome').text('Usuario: ' + nomeUsuario);
+
+            }, 100);
+
+
+            $('#mensagem').focus();
+
+            $.connection.hub.start().done(function () {
+
+
+                $('#connectionStatus').text('conectado');
+
+                chat.server.loadDD(nomeUsuario);
+
+
+                $('#enviamensagem').click(function () {
+
+                    chat.server.enviar($('#usuarios option:selected').text(), $('#usuarios option:selected').val(), $('#exibenome').text(), $('#mensagem').val());
+
+                    $('#mensagem').val('');
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

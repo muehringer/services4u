@@ -1,0 +1,16 @@
+D:\Temp\TemplateBackEnd\Base.Infrastructure\bin\Debug\Base.Infrastructure.dll
+D:\Temp\TemplateBackEnd\Base.Infrastructure\bin\Debug\Base.Infrastructure.pdb
+D:\Temp\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Temp\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.dll
+D:\Temp\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.pdb
+D:\Temp\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Temp\TemplateHibridoBackEnd\Base.Infrastructure\bin\Debug\Base.Infrastructure.dll
+D:\Temp\TemplateHibridoBackEnd\Base.Infrastructure\bin\Debug\Base.Infrastructure.pdb
+D:\Temp\TemplateHibridoBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Temp\TemplateHibridoBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.dll
+D:\Temp\TemplateHibridoBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.pdb
+D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Infrastructure\bin\Debug\Base.Infrastructure.dll
+D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Infrastructure\bin\Debug\Base.Infrastructure.pdb
+D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.dll
+D:\Temp\Base\Source\BackEnd\TemplateBackEnd\Base.Infrastructure\obj\Debug\Base.Infrastructure.pdb
