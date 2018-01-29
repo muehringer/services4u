@@ -1,11 +1,11 @@
 ﻿import React, {Component} from 'react';
-import $ from 'jquery';
-
+import { getToken } from '../api/GetToken'
+	
 class Body extends Component {
 
 	constructor(props) {
     		super(props);
-    		this.state = {user: '', password: ''};
+    		this.state = {user: '', password: '', tokenX: ''};
 		debugger;
 		//usar no botão ou aqui no construtor
 		this.login = this.login.bind(this); 
@@ -15,35 +15,12 @@ class Body extends Component {
 	loginChange(event) {
 		this.setState({user: event.target.form.user.value, password: event.target.form.password.value});
 	}
-
+        	
 	login(event) {
 
-		var token = null;
-		var token_type = null;
-
-		$.ajax({
-			  method: "POST",
-			  url: "http://localhost:12004/token",
-			  //data: { username: "Fulano", password: "1234", grant_type: "password" }, 
-			  data: { username: this.state.user, password: this.state.password, grant_type: "password" }, 
-			  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			  contentType: "application/json; charset=utf-8",
-			  dataType: 'json',
-			  async: false,
-			  beforeSend : function(){
-						   //$("#resultado").html("ENVIANDO...");
-			  },
-			  success: function (response) {
-			  debugger;
-
-				token = response.access_token;
-				token_type = response.token_type;
-			  },
-			  error: function (e) {
-                
-			  }
-		});
-
+		
+		debugger;
+		this.state.tokenX = getToken(this.state.user, this.state.password);
 		event.preventDefault();
 	}
 
