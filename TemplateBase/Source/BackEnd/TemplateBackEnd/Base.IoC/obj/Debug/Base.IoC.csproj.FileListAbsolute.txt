@@ -92,3 +92,6 @@ D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\obj\Debug\Base.IoC.
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\obj\Debug\Base.IoC.csproj.CoreCompileInputs.cache
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\obj\Debug\Base.IoC.dll
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\obj\Debug\Base.IoC.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\bin\Debug\Serilog.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\bin\Debug\Serilog.Settings.AppSettings.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.IoC\bin\Debug\Serilog.xml

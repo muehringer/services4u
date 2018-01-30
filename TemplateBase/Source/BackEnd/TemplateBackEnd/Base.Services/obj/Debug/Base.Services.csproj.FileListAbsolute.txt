@@ -276,3 +276,14 @@ D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\obj\Debug\Base
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\obj\Debug\Base.Services.csproj.CoreCompileInputs.cache
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\obj\Debug\Base.Services.dll
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\obj\Debug\Base.Services.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.MSSqlServer.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.PeriodicBatching.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.xml
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.MSSqlServer.xml
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.PeriodicBatching.xml
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.File.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.RollingFile.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.File.xml
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Sinks.RollingFile.xml
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Services\bin\Serilog.Settings.AppSettings.dll

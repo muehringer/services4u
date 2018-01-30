@@ -66,3 +66,6 @@ D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\obj\Debug\B
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\obj\Debug\Base.Persistence.csproj.CoreCompileInputs.cache
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\obj\Debug\Base.Persistence.dll
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\obj\Debug\Base.Persistence.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\bin\Debug\Serilog.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\bin\Debug\Serilog.Settings.AppSettings.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Persistence\bin\Debug\Serilog.xml

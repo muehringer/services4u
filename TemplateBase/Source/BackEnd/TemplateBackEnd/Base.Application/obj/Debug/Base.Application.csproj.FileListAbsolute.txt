@@ -51,3 +51,6 @@ D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\B
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.csproj.CoreCompileInputs.cache
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.dll
 D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\obj\Debug\Base.Application.pdb
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Serilog.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Serilog.Settings.AppSettings.dll
+D:\Temp\TemplateBase\Source\BackEnd\TemplateBackEnd\Base.Application\bin\Debug\Serilog.xml
