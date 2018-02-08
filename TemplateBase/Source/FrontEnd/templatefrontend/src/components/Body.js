@@ -30,20 +30,24 @@ class Body extends Component {
 				<span>Corpo</span>
 				<div className="row">
 					<form className="col s12">
-						<div className="input-field col s6">
+						<div className="input-field col s3">
 							  <input placeholder="User" id="user" type="text" className="validate" value={this.state.user} onChange={this.loginChange} />
 							  <label htmlFor="user">User</label>
 						</div>
-						<div className="input-field col s6">
+						<div className="input-field col s3">
 							  <input placeholder="Password" id="password" type="password" className="validate" value={this.state.password} onChange={this.loginChange} />
 							  <label htmlFor="password">Password</label>
 						</div>
-
+						<div className="input-field col s6">
+						</div>				
+						<div className="col s12">
 						<button className="btn waves-effect waves-light" onClick={this.login} type="button" name="action">Login
 							<i className="material-icons right">send</i>
 						</button>
+						</div>
 					</form>
 				</div>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		
 			</div>
 		);
