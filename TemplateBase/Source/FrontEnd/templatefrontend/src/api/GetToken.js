@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 export const getToken = (username, password) => {
-		debugger;
 		var token = null;
 		var token_type = null;
 
@@ -18,8 +17,6 @@ export const getToken = (username, password) => {
 						   //$("#resultado").html("ENVIANDO...");
 			  },
 			  success: function (response) {
-			  debugger;
-
 				token = response.access_token;
 				token_type = response.token_type;
 			  },

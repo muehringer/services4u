@@ -6,7 +6,6 @@ class Body extends Component {
 	constructor(props) {
     		super(props);
     		this.state = {user: '', password: '', tokenX: ''};
-		debugger;
 		//usar no botão ou aqui no construtor
 		this.login = this.login.bind(this); 
 		this.loginChange = this.loginChange.bind(this);
@@ -17,9 +16,6 @@ class Body extends Component {
 	}
         	
 	login(event) {
-
-		
-		debugger;
 		this.state.tokenX = getToken(this.state.user, this.state.password);
 		event.preventDefault();
 	}

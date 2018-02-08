@@ -14,10 +14,12 @@ class Header extends Component {
     		};
 
 		var links = {
-			backgroundColor: 'white',
-			color: '#008C69'
+			'background-color': 'white',
+			'color': '#008C69',
+			':hover': { 'color': '#000099' }
 		};
-		
+
+
 		return (
 			<div>
 				<div className="navbar-fixed">
@@ -31,8 +33,8 @@ class Header extends Component {
 							<a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
 							
 							<ul className="right hide-on-med-and-down" style={menu}>
-          							<li><a className="link" style={links} href="sass.html">Teste1</a></li>
-          							<li><a className="link" style={links} href="badges.html">Teste2</a></li>
+          							<li><a style={{ background: "red", ":hover": { background: "green !important" } }} href="sass.html">Teste1</a></li>
+          							<li><a className="link" href="badges.html">Teste2</a></li>
 	      						</ul>
 								
 							<br />
