@@ -1,6 +1,7 @@
 ﻿import React, {Component} from 'react';
-import { getToken } from '../api/GetToken'
-	
+import { getToken } from '../api/GetToken';
+import RaisedButton from 'material-ui/RaisedButton';
+
 class Body extends Component {
 
 	constructor(props) {
@@ -21,6 +22,12 @@ class Body extends Component {
 	}
 
 	render() {
+
+		var link = {
+			color: '#008C69',
+			':hover': { color: '#000099' }
+		};
+
 		return (
 			<div>
 				<span>Corpo</span>
@@ -44,7 +51,9 @@ class Body extends Component {
 					</form>
 				</div>
 				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		
+						
+<RaisedButton label="Material UI" />
+<a href="sass.html" style={{'color': '#008C69', ':hover': {'color': '#000099'} }}>teste</a>
 			</div>
 		);
 	}

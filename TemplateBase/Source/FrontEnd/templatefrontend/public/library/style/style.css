@@ -13,16 +13,27 @@
  */
 
 
+body {
+	background-color: white !important; 
+	color: '#008C69' !important;
+}
 
-nav ul a,
+div {
+	background-color: white !important; 
+	color: '#008C69' !important;
+}
+
+
+
+nav ul,
 
 nav .brand-logo {
   
-	color: #444;
+	color: '#008C69';
 
 }
 
-.link:hover {
+a:hover {
 	text-decoration: underline overline; 
 	color:#0085B2 !important;
 }

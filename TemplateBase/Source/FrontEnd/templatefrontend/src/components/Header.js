@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import AppBar from 'material-ui/AppBar';
 
 class Header extends Component {
 
@@ -13,18 +14,22 @@ class Header extends Component {
       			marginRight: '200px',
     		};
 
-		var links = {
-			'background-color': 'white',
-			'color': '#008C69',
+		var link = {
+			color: '#008C69',
 			':hover': { 'color': '#000099' }
 		};
 
 
 		return (
+
 			<div>
+<AppBar
+    title="Title"
+    iconClassNameRight="muidocs-icon-navigation-expand-more" style={{position: 'fixed'}}
+  />
 				<div className="navbar-fixed">
 
-    					<nav className="white nav-extended" role="navigation">
+    					<nav className="white nav-extended" role="navigation" >
  						<div className="nav-wrapper container" style={logo}>
 							<a id="logo-container" href="#!" className="brand-logo"><img src="images/main/logocabecalho.png" /></a>
 						</div>
@@ -33,12 +38,12 @@ class Header extends Component {
 							<a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
 							
 							<ul className="right hide-on-med-and-down" style={menu}>
-          							<li><a style={{ background: "red", ":hover": { background: "green !important" } }} href="sass.html">Teste1</a></li>
-          							<li><a className="link" href="badges.html">Teste2</a></li>
+          							<li><a href="sass.html" style={link}><span style={{ color: '#008C69', ':hover': { 'color': '#000099' } }}>Teste1</span></a></li>
+          							<li><a className="link" style={{ color: '#008C69' }} href="badges.html">Teste2</a></li>
 	      						</ul>
 								
 							<br />
- 							<span className="right">Acesso ao Sistema</span>
+ 							<span className="right" style={{ color: '#008C69' }}>Acesso ao Sistema</span>
 							<br />
       							<a className="btn-floating btn-large halfway-fab waves-effect waves-light pulse">
         							<i className="material-icons right">send</i>
@@ -55,7 +60,9 @@ class Header extends Component {
 					<li><a href="#">Teste4</a></li>
 				</ul>
 
+
 			</div>
+
 		);
 	}
 }

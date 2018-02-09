@@ -1,0 +1,60 @@
+<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div>
+					<input type="text" ng-model="nome">
+					<p ng-bind="nome" />
+					<p>{{5 + 5}}</p>
+
+				<ul>
+					<li ng-repeat="x in nomes | orderBy:'Name'">{{x.Name}}</li>
+
+				</ul>
+
+					<h1>{{myHeader}}</h1>
+					<h1>{{theTime}}</h1>
+				</div>
+	<select ng-model="selectedName">
+	<option ng-repeat="x in nomes" value="{{x.Name}}">{{x.Name}}</option>
+	</select>
+
+
+<h1>You selected: {{selectedName}}</h1>
+
+<h1 ng-mousemove="count = count + 1">Mouse over me!</h1>
+
+<h2>{{ count }}</h2>
+
+<form name="myForm" novalidate>
+<p>Name:
+<input name="myName" ng-model="myName" required>
+<span style="color:red" ng-show="myForm.myName.$dirty && myForm.myName.$invalid">
+<span ng-show="myForm.myName.$error.required">The name is required.</span>
+</p>
+
+<p>Email:<br>
+  <input type="email" name="email" ng-model="email" required>
+  <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+</p>
+
+<p>
+  <input type="submit"
+  ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid">
+</p>
+
+</form>
+
+
+ <ul>
+    <li ng-repeat="x in products">{{x}} <span ng-click="removeItem($index)" style="cursor:pointer;">X</span> </li>
+  </ul>
+  <input ng-model="addMe">
+  <button ng-click="addItem()">Add</button>
+
+			</div>
+		</div>
+	</div>
