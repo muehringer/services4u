@@ -6,6 +6,6 @@
 
 -Arquitetura FrontEnd -> React JS.
 
--SiteWeb -> Angular JS
+-SiteWeb -> Angular JS.
 
 -SignalR -> implementação de chat para atendimento on-line.
