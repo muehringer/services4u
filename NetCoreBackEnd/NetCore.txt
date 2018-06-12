@@ -1,0 +1,173 @@
+﻿https://github.com/ruidfigueiredo/WebApiJwtExample/blob/master/TokenController.cs
+https://www.blinkingcaret.com/2017/09/06/secure-web-api-in-asp-net-core/
+https://stackoverflow.com/questions/38977088/asp-net-core-web-api-authentication
+https://github.com/jonhilt/NetCoreAuth/tree/master/NetCoreJWTAuth.App
+https://medium.com/@renato.groffe/asp-net-core-2-0-autentica%C3%A7%C3%A3o-em-apis-utilizando-jwt-json-web-tokens-4b1871efd
+
+
+
+
+
+About membership
+Homepage
+Go to the profile of Renato Groffe
+Renato Groffe
+Microsoft Most Valuable Professional (MVP), Multi-Plataform Technical Audience Contributor (MTAC), Software Engineer, Technical Writer and Speaker
+May 1, 2017
+ASP.NET Core: criando uma API em Linux com VS Code e .NET Core CLI
+
+O objetivo deste artigo é demonstrar a implementação de uma API REST em Linux, empregando para isto o ASP.NET Core, o Visual Studio Code e o .NET Core Command-Line Interface (CLI).
+
+Introdução
+Muitas são as mudanças que acompanham o ASP.NET Core: multiplataforma, totalmente reformulado, otimizado para a nuvem e em sintonia com as novas tendências do desenvolvimento Web. A possibilidade de uso do ASP.NET Core em Linux abriu inclusive novas fronteiras, em muitos casos até então inexploradas, para que desenvolvedores .NET demonstrem suas habilidades.
+
+O desenvolvimento baseado no ASP.NET Core e no .NET Core em Linux faz uso extensivo de linhas de comandos, diferentemente das versões do Visual Studio para Windows. Embora muitos enxerguem tal abordagem como um processo mais trabalhoso, a criação de uma nova aplicação via terminal Linux constitui uma tarefa extremamente simples.
+
+A implementação de uma aplicação ASP.NET Core em Linux será demonstrada em detalhes nas próximas seções. Isto acontecerá através da construção de uma API REST, empregando para tanto o .NET Core Command-Line Interface (CLI) e o Visual Studio Code.
+
+Configurando o ambiente de desenvolvimento
+Para a implementação do exemplo apresentado neste artigo foi utilizada a versão 16.04.2 do Ubuntu Desktop, com a criação de uma máquina virtual no Hyper-V em um computador executando o Windows 10 Professional. Nesta VM foram instalados ainda o .NET Core 1.1 e o Visual Studio Code.
+
+Para maiores detalhes sobre como configurar este ambiente de desenvolvimento consulte as seguintes referências:
+
+.NET Core installation guide - Ubuntu
+
+Running VS Code on Linux
+
+Detalhes da API a ser implementada
+A API REST descrita neste artigo permitirá a conversão de alturas em pés (unidade bastante utilização em aviação) para o valor equivalente em metros. Este exemplo já foi inclusive abordado em outro artigo que escrevi, no qual demonstrei o uso em Linux do Yeoman em conjunto com o Visual Studio Code.
+
+A fórmula a seguir permitirá converter alturas em pés, levando em conta para isto um arredondamento de 4 casas decimais para os resultados obtidos:
+
+
+Uma Solution chamada ExemploAPIREST deverá ser criada, estando vinculados à mesma os seguintes projetos:
+
+Alturas, uma Class Library que conterá o cálculo para conversão de alturas em pés para os valores correspondentes em metros;
+APIAlturas, API REST que utilizará a biblioteca Alturas a fim de retornar o resultado das conversões.
+Criando a Solution
+Para criar a Solution e os diferentes projetos que farão parte da mesma será usado o .NET Core Command-Line Interface (CLI). Este utilitário de linha de comando conta com diversas opções para a criação e gerenciamento de projetos baseados no .NET Core, já suportando inclusive o novo padrão adotado para a plataforma (.csproj).
+
+OBSERVAÇÃO: os diferentes passos descritos a seguir serão realizados em uma janela do Terminal no Ubuntu, a partir de um diretório chamado ExemploAPIREST.
+
+Ao executar a instrução dotnet new serão exibidas as diversas opções existentes para a criação de projetos .NET Core:
+
+
+A linha de comando a seguir possibilitará a criação da Solution ExemploAPIREST:
+
+dotnet new sln -n ExemploAPIREST
+
+Como resultado desta última ação o arquivo ExemploAPIREST.sln será gerado, conforme indicado na próxima imagem:
+
+
+Implementando a Class Library
+A criação do projeto Alturas acontecerá por meio da seguinte linha de comando (com o parâmetro -n informando o nome do projeto):
+
+dotnet new classlib -n Alturas
+
+Um aviso similar ao da próxima janela aparecerá, confirmando a geração com sucesso deste novo projeto:
+
+
+Para adicionar o projeto Alturas à Solution ExemploAPIREST será utilizada a seguinte linha de comando:
+
+dotnet sln add Alturas/Alturas.csproj
+
+
+Acessar agora o diretório Alturas, executando o comando a seguir para restaurar as dependências da biblioteca:
+
+dotnet restore
+
+O resultado desta ação pode ser visualizado na próxima imagem:
+
+Renomear também o arquivo Class1.cs (gerado automaticamente pelo utilitário dotnet) para ConversorAlturas.cs, por meio do comando indicado a seguir:
+
+mv Class1.cs ConversorAlturas.cs
+
+Para ter acesso ao conteúdo do projeto no Visual Studio Code digitar no Terminal, a partir do diretório Alturas, o seguinte comando:
+
+code .
+
+O Visual Studio Code será então exibido. Clicar no painel esquerdo deste utilitário sobre o arquivo ConversorAlturas.cs, de forma a exibir o conteúdo da classe correspondente:
+
+No arquivo ConversorAlturas.cs ficará a implementação de uma classe estática também chamada ConversorAlturas. Neste tipo foi especificado o método PesParaMetros, o qual converterá alturas em pés para o equivalente em metros:
+
+
+Após estes ajustes será necessário compilar o projeto Alturas. Utilizar para isto seguinte linha de comando:
+
+dotnet build
+
+O resultado esperado para a compilação desta Class Library pode ser observado na próxima imagem:
+
+Implementando a API REST
+O projeto APIAlturas será criado por meio da seguinte linha de comando (executada a partir do diretório ExemploAPIREST):
+
+dotnet new webapi -n APIAlturas
+
+Este projeto também será vinculado à Solution ExemploAPIREST através da linha de comando a seguir:
+
+dotnet sln add APIAlturas/APIAlturas.csproj
+
+Acessar então o diretório APIAlturas, executando o seguinte comando para adicionar a referência que possibilitará o uso da biblioteca Alturas pela API REST:
+
+dotnet add reference ../Alturas/Alturas.csproj
+
+Na próxima imagem é possível observar o resultado desta ação:
+
+Será preciso também restaurar as dependências do projeto APIAlturas, empregando para isto o comando:
+
+dotnet restore
+
+Renomear o arquivo ValuesController.cs (gerado automaticamente na pasta Controllers, quando da criação do projeto APIAlturas) para ConversorAlturasController.cs. Este ajuste será feito utilizando o comando indicado a seguir:
+
+mv ValuesController.cs ConversorAlturasController.cs
+
+Carregar agora o Visual Studio Code (a partir do diretório APIAlturas) com a seguinte linha de comando:
+
+code .
+
+Alterar então o conteúdo do arquivo ConversorAlturasController.cs no VS Code, de forma que no mesmo conste a implementação da classe ConversorAlturasController. Este Controller fará uso da biblioteca Alturas (mais precisamente do método PesParaMetros definido no tipo ConversorAlturas), recebendo requisições HTTP com uma altura especificada em pés e produzindo como resultado um objeto anônimo com o valor equivalente em metros:
+
+
+Testes
+Para testar a aplicação será necessário executar no diretório APIAlturas o comando:
+
+dotnet run
+
+Esta ação fará o build da aplicação, além de dar início à execução da mesma:
+
+Acessando a URL http://localhost:5000/api/conversoralturas/pesmetros/1000 em um browser será então exibido o resultado da conversão para 1000 pés:
+
+Conclusão
+A possibilidade de uso de linhas de comando é mais uma das opções oferecidas pelo .NET Core, contando com uma boa documentação e conferindo agilidade a desenvolvedores familiarizados com esta plataforma. Muito embora este artigo tenha focado na implementação de aplicações ASP.NET Core em Linux com o Visual Studio Code e o .NET Core Command-Line Interface, os mesmos procedimentos descritos aqui também são válidos para ambientes Windows e Mac.
+
+Referências
+.NET Core command-line interface (CLI) tools
+
+Conteúdos gratuitos sobre ASP.NET Core, .NET Core e C# 7.0
+
+ASP.NET Core - Documentation
+
+Visual Studio Code
+
+AspnetDotnetDotnet CoreWeb DevelopmentLinux
+Like what you read? Give Renato Groffe a round of applause.
+From a quick cheer to a standing ovation, clap to show how much you enjoyed this story.
+
+Go to the profile of Renato Groffe
+Renato Groffe
+Microsoft Most Valuable Professional (MVP), Multi-Plataform Technical Audience Contributor (MTAC), Software Engineer, Technical Writer and Speaker
+
+More from Renato Groffe
+Novidades do C# 7.3: como habilitar, utilizando os operadores == e != com Tuplas
+Go to the profile of Renato Groffe
+Renato Groffe
+Also tagged Dotnet
+What are the pre-requisites for an ASP.NET website launch
+Go to the profile of Zameer Ansari
+Zameer Ansari
+Also tagged Aspnet
+Habilitar compactação com gzip no ASP.NET Core
+Go to the profile of Tiago Ávila
+Tiago Ávila
+Responses
+Go to the profile of Renato Groffe
+Never miss a story from Renato Groffe, when you sign up for Medium. Learn more

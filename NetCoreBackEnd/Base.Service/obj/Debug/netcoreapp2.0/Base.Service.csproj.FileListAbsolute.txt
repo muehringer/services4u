@@ -1,0 +1,16 @@
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Service.deps.json
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Service.runtimeconfig.json
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Service.runtimeconfig.dev.json
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Service.dll
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Service.pdb
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Application.dll
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Domain.dll
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Infrastructure.dll
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Infrastructure.pdb
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Application.pdb
+D:\Temp\NetCore\Base.Service\bin\Debug\netcoreapp2.0\Base.Domain.pdb
+D:\Temp\NetCore\Base.Service\obj\Debug\netcoreapp2.0\Base.Service.csproj.CoreCompileInputs.cache
+D:\Temp\NetCore\Base.Service\obj\Debug\netcoreapp2.0\Base.Service.AssemblyInfoInputs.cache
+D:\Temp\NetCore\Base.Service\obj\Debug\netcoreapp2.0\Base.Service.AssemblyInfo.cs
+D:\Temp\NetCore\Base.Service\obj\Debug\netcoreapp2.0\Base.Service.dll
+D:\Temp\NetCore\Base.Service\obj\Debug\netcoreapp2.0\Base.Service.pdb

@@ -1,0 +1,10 @@
+D:\Temp\NetCore\Base.Domain\bin\Debug\netstandard2.0\Base.Domain.deps.json
+D:\Temp\NetCore\Base.Domain\bin\Debug\netstandard2.0\Base.Domain.dll
+D:\Temp\NetCore\Base.Domain\bin\Debug\netstandard2.0\Base.Domain.pdb
+D:\Temp\NetCore\Base.Domain\bin\Debug\netstandard2.0\Base.Infrastructure.dll
+D:\Temp\NetCore\Base.Domain\bin\Debug\netstandard2.0\Base.Infrastructure.pdb
+D:\Temp\NetCore\Base.Domain\obj\Debug\netstandard2.0\Base.Domain.csproj.CoreCompileInputs.cache
+D:\Temp\NetCore\Base.Domain\obj\Debug\netstandard2.0\Base.Domain.AssemblyInfoInputs.cache
+D:\Temp\NetCore\Base.Domain\obj\Debug\netstandard2.0\Base.Domain.AssemblyInfo.cs
+D:\Temp\NetCore\Base.Domain\obj\Debug\netstandard2.0\Base.Domain.dll
+D:\Temp\NetCore\Base.Domain\obj\Debug\netstandard2.0\Base.Domain.pdb
