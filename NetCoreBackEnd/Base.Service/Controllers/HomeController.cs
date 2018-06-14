@@ -3,15 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Base.Service.Controllers
 {
+    [Route("api/teste")]
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        [HttpGet]
+        [Route("ObterTeste")]
         [Authorize]
-        public IActionResult GetUserDetails(){
+        public ObjectResult GetUserDetails(){
             return new ObjectResult(new {
                 Username = User.Identity.Name
             });                

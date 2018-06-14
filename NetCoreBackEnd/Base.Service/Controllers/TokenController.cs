@@ -34,8 +34,8 @@ namespace Base.Service.Controllers
 
             var token = new JwtSecurityToken(
                 new JwtHeader(new SigningCredentials(
-                    //Converter a chave para base64 https://www.base64encode.org/
-                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes("QDEyMzQ1Ng==")), 
+                    //the secret that needs to be at least 16 characters long for HmacSha256
+                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes("@S3rv1c354uServices4U")), 
                                              SecurityAlgorithms.HmacSha256)),
                 new JwtPayload(claims));
 

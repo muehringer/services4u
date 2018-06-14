@@ -52,11 +52,18 @@ namespace Base.Service
 
                     ValidateIssuerSigningKey = true,
                     //Palavra chave
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("@123456")),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("@S3rv1c354uServices4U")),
                     ValidateLifetime = true,
                     ClockSkew = TimeSpan.FromMinutes(5)
                 };
             });
+            services.AddCors();
+            //ou
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowSpecificOrigin",
+            //        builder => builder.WithOrigins("http://example.com"));
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +75,13 @@ namespace Base.Service
             }
 
             app.UseAuthentication();
+            app.UseCors(
+                options => options.WithOrigins("http://example.com")
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+            );
             app.UseMvc();
             app.UseSwagger();
             app.UseSwaggerUI(c => {
