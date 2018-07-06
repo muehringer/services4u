@@ -12,6 +12,9 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.0" />
     <PackageReference Include="swashbuckle.AspNetCore" Version="2.5.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.2" />
   </ItemGroup>
@@ -23,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="../Base.Infrastructure/Base.Infrastructure.csproj" />
     <ProjectReference Include="../Base.Application/Base.Application.csproj" />
+    <ProjectReference Include="../Base.Persistence/Base.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
