@@ -2,7 +2,7 @@
 
 ### Repositório para compartilhar conhecimentos, simples e objetivo:
 
--Arquitetura BackEnd - .NET Core -> DDD, autenticação JWT Json Web Token, Swagger.
+-Arquitetura BackEnd - .NET Core -> DDD, autenticação JWT Json Web Token, CORS, Web.Api com Swagger, implementação de injeção de dependência nativa, mapeamento de objetos com AutoMapper, acesso a banco de dados com Dapper.Net, retorno padronizado, envio de e-mail e criptografia.
 
 -Arquitetura BackEnd -> DDD, autenticação OAuth2, Owin, CORS, Web.Api com Swagger, implementação de injeção de dependência com Simple Injector, mapeamento de objetos com AutoMapper, acesso a banco de dados híbrido com Entity Framework, Unit of Work, Migrations e Dapper.Net, retorno padronizado, envio de e-mail e criptografia.
 

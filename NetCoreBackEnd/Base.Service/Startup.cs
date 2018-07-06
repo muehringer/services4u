@@ -18,6 +18,7 @@ using Base.Application;
 using Base.Domain;
 using Base.Persistence;
 using Base.Infrastructure;
+using AutoMapper;
 
 namespace Base.Service
 {
@@ -82,6 +83,8 @@ namespace Base.Service
             //Lendo chaves no arquivo de configuracoes
             services.AddOptions();
             services.Configure<KeysConfig>(Configuration);
+            
+            services.AddAutoMapper();
 
             //Descomentar se utilizar a ConnectionString do arquivo appsettings.json
             //Func<IServiceProvider, MySqlConnection> Connect = a => new MySqlConnection(Configuration.GetConnectionString("DefaultConnection"));
